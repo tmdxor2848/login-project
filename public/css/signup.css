@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e5ec;
+    font-family: Arial, sans-serif;
+}
+
+.signup {
+    background: #e0e5ec;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #ffffff;
+}
+
+.signup-inset {
+    background: #e0e5ec;
+    border-radius: 20px;
+    box-shadow: inset 10px 10px 20px #a3b1c6, inset -10px -10px 20px #ffffff;
+}
+
+.signup-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    gap: 15px;
+}
+
+h1 {
+    color: #6d7582;
+    margin-bottom: 20px;
+}
+
+.id-box .signup-input {
+   
+    flex: 0.85;       /* 👈 남는 공간만 사용 */
+}
+
+.id-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* 중복확인 버튼 */
+.check-btn {
+    padding: 6px 10px;   /* 👈 줄이기 */
+    font-size: 12px;     /* 👈 글씨도 줄이기 */
+    color: #6d7582;
+    border: none;
+    border-radius: 10px;
+    background: #e0e5ec;
+    cursor: pointer;
+
+    /* 입체감 */
+    box-shadow: 5px 5px 10px #a3b1c6,
+                -5px -5px 10px #ffffff;
+
+    transition: all 0.2s ease;
+}
+
+/* 클릭 효과 */
+.check-btn:active {
+    box-shadow: inset 3px 3px 6px #a3b1c6,
+                inset -3px -3px 6px #ffffff;
+}
+
+/* 호버 효과 */
+.check-btn:hover {
+    box-shadow: 3px 3px 6px #a3b1c6,
+                -3px -3px 6px #ffffff;
+}
+
+#id-msg {
+    position: absolute;
+    bottom: -10px;   /* 👈 아래로 살짝 */
+    left: 30px;
+    font-size: 12px;
+}
+
+.signup-input {
+    padding: 15px;
+    width: 80%;
+    font-size: 16px;
+    color: #6d7582;
+    border: none;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+.signup-input::placeholder{
+    color: #a3b1c6;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.radio-label input {
+    display: none;
+}
+
+.radio-label span {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #e0e5ec;
+    box-shadow: 5px 5px 10px #a3b1c6, -5px -5px 10px #ffffff;
+    cursor: pointer;
+    margin-bottom: 25px;
+    color: #48515e;
+}
+
+/* 클릭 상태 */
+.radio-label input:checked + span {
+    box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+}
+
+.signup-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #6d7582;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-button:active {
+    box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+}

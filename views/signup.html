@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/signup.css">
+    <script>
+    //  아이디 중복 확인
+        function checkId() {
+        const userid = document.getElementById('userid').value.trim();
+    
+        if (!userid) {
+            alert('아이디를 입력하세요');
+            return;
+        }
+    
+        fetch(`/check-id?userid=${encodeURIComponent(userid)}`)
+            .then(res => res.json())
+            .then(data => {
+                const msg = document.getElementById('id-msg');
+    
+                if (data.exists) {
+                    msg.innerText = '이미 사용 중인 아이디입니다.';
+                    msg.style.color = 'red';
+                } else {
+                    msg.innerText = '사용 가능한 아이디입니다.';
+                    msg.style.color = 'green';
+                }
+            });
+    }
+    
+    //  비밀번호 일치 확인
+        function checkPassword() {
+            const password = document.getElementById('password');
+            const confirm = document.getElementById('confirm');
+    
+            if (password.value !== confirm.value) {
+                alert('비밀번호가 일치하지 않습니다.');
+                confirm.value = '';
+                confirm.focus();
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="signup signup-box">
+        <h1>회원가입</h1>
+        <form action="/signup" method="post" onsubmit="return checkPassword()">
+            <div class="id-box">
+                <input type="text" id="userid" name="userid" placeholder="아이디" class="signup signup-input" required>
+                <button type="button" class="check-btn" onclick="checkId()">중복확인</button>
+                <p id="id-msg"></p>
+            </div>
+
+
+            <input type="password" class="signup signup-input" name="password" id="password" placeholder="비밀번호" required>
+            <input type="password" class="signup signup-input" name="confirm"  id="confirm" placeholder="비밀번호 확인" required>
+            <input type="text" class="signup signup-input" name="name" placeholder="이름" required>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="sex" value="남" required>
+                        <span>남</span>
+                </label>
+
+                <label class="radio-label">
+                    <input type="radio" name="sex" value="여" required>
+                        <span>여</span>
+                </label>
+            </div>
+            <input type="email" class="signup signup-input" name="email" placeholder="이메일" required>
+
+            <button type="submit" class="signup signup-button">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
