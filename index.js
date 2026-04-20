@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
 app.get('/main', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'main.html'));
 });
+app.get('/signup_success', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'signup_success.html'));
+});
+
+
 
 app.post('/login', (req, res) => {
     const { userid, password } = req.body;
@@ -101,7 +106,7 @@ app.post('/signup', async (req, res) => {
             }
 
             console.log('저장 성공:', result);
-            res.send('회원가입 완료');
+            res.redirect('/signup_success');
         });
     } catch (error) {
         console.error(error);
