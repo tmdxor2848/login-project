@@ -10,21 +10,21 @@
 </head>
 
 <body>
-    <section class="navbar">
-        <nav>
-            <div class="logout">
-                <button class="logout-btn">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </button>
-            </div>
-            <div class="links">
-                <a href="#" class="active">About</a>
-                <a href="#" class="active">Project</a>
-                <a href="#" class="active">Contact Me</a>
-            </div>
-        </nav>
-    </section>
-    <div class="container">
+
+    <nav>
+        <div class="logo">
+            <button class="main logout-btn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+        </div>
+        <div class="main links">
+            <a href="#" class="active">About</a>
+            <a href="#">Project</a>
+            <a href="#">Contact Me</a>
+        </div>
+    </nav>
+
+    <div class="main container">
         <div class="left">
             <h3>Junior Full Stack Developer</h3>
             <div class="info">
@@ -39,9 +39,9 @@
                     </button>
                 </div>
                 <div id="myModal" class="modal">
-                    <div class="modal-content">
+                    <div class="main modal-content">
                         <span class="close" onclick="closeModal()">&times;</span>
-                        <h2>Personal Infomation</h2>
+                        <h2>Personal Information</h2>
                         <p>
                             <strong>Name :</strong> 임승택 (Seungtaek Lim)
                         </p>
@@ -49,7 +49,7 @@
                             <strong>Gender :</strong> male
                         </p>
                         <p>
-                            <strong>Date of Birth : :</strong> December 17, 1995
+                            <strong>Date of Birth :</strong> December 17, 1995
                         </p>
                         <p>
                             <strong>Address :</strong> 서울 특별시 참숯1길 19 e편한세상 501동 202호
@@ -62,17 +62,17 @@
             </div>
         </div>
         <div class="right">
-            <a href="#" class="online"><i class="fa-solid fa-circle"></i>Available For Job</a>
+            <a href="#" class="main online"><i class="fa-solid fa-circle"></i>Available For Job</a>
             <img src="/images/IMG_0318-1.jpg" alt="">
         </div>
     </div>
 
     <div class="works">
-        <div class="left">
+        <div class="main left">
             <h3>
                 <i class="fa-solid fa-circle"></i> Education and Degrees
             </h3>
-            <div class="work-list">
+            <div class="works-list">
                 <div class="item">
                     <div class="works-info">
                         <h5 class="active">서울 IT 아카데미 홍대</h5>
@@ -105,38 +105,41 @@
         </div>
 
         <div class="right">
-            <div class="item">
+            <div class="main item">
                 <a href="https://tmdxor2848.tistory.com/18" target="_blank">Stack</a>
                 <p>
                     Oracle Database, Java 프로그래밍 언어(JDK), Eclipse IDE, Visual Studio Code, Node.js(Express), MySQL,
                     JavaScript(ES6), HTML/CSS, bcrypt, Git/GitHub, 의사소통
                 </p>
             </div>
-            <div class="item">
+            <div class="main item">
                 <a href="#">수상 경력(Awards and Honors)</a>
                 <p>사단장 표창(최우수 훈련병) - 육군 제39보병사단</p>
                 <p>시의장 표창 - 관악구 배드민턴 협회</p>
             </div>
 
-            <div class="item">
+            <div class="main item">
                 <a href="#">자격증</a>
                 <p>1종보통운전면허 - 경상남도경찰청</p>
                 <p>경비보안 신임 이수 - 한국경비협회</p>
                 <p>SQL 개발자 - 한국데이터산업진흥원장</p>
             </div>
 
-            <div class="item">
+            <div class="main item">
                 <a href="#">빈칸</a>
                 <p></p>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer class="main">
         <a href="#">My Portfolio</a>
         <div class="socials">
             <a href="https://github.com/tmdxor2848" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com/tmdxor2848/" target="_blank">Instagram</a>
+            <a href="https://tmdxor2848.tistory.com" target="_blank">T Story</a>
         </div>
+        <a href="#" class="online"><i class="fa-solid fa-circle"></i>Available For Job</a>
     </footer>
 
     <script>
