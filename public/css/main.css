@@ -279,3 +279,191 @@ nav .links a.active {
 .works .left .works-list .item .works-info h5.active {
     color: #4a90e2;
 }
+
+.works .left .works-list .item .works-info p {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #7f8c9d;
+}
+
+.works .left .works-list .item>p {
+    font-size: 20px;
+    color: #7f8c9d;
+}
+
+.works .right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% auto;
+    gap: 20px;
+}
+
+.works .right .item:first-child {
+    grid-column: span 2;
+}
+
+.works .right .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.works .right .item:hover a {
+    color: #4a90e2;
+}
+
+.works .right .item a {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.works .right .item>p {
+    font-size: 17px;
+    line-height: 26px;
+    color: #7f8c9d;
+}
+
+.works .right .item:not(:first-child) {
+    gap: 14px;
+}
+
+.works .right .item:not(:first-child) a {
+    font-size: 18px;
+}
+
+.works .right .item:not(:first-child) p {
+    font-size: 15px;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px;
+    z-index: 1;
+}
+
+footer .socials {
+    display: flex;
+    align-content: center;
+    gap: 12px;
+}
+
+footer .socials a {
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+footer a.online {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 15px;
+    font-size: 13px;
+}
+
+footer a.online i {
+    color: #4a90e2;
+    font-size: 9px;
+}
+
+@media screen and (max-width: 1220px) {
+    .about {
+        padding: 60px 30px;
+    }
+
+    .works {
+        flex-direction: column;
+    }
+
+    .works .left,
+    .works .right .item,
+    footer {
+        padding: 40px 30px;
+    }
+
+    .works .right {
+        grid-template-rows: auto auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav .links {
+        padding: 0 40px;
+    }
+
+    footer>a {
+        font-size: 20px;
+    }
+
+    footer .socials a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav .links a {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .container .left .info {
+        margin-top: 3px;
+    }
+
+    .container .right img {
+        margin-top: 20px;
+    }
+
+    footer a.online {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container .left .info h2 {
+        font-size: 30px;
+    }
+
+    .container .left .info p,
+    .works .left .works-list .item .works-info p,
+    .works .left .works-list .item>p {
+        font-size: 16px;
+    }
+
+    .container,
+    .left .info .btn button {
+        font-size: 14px;
+    }
+
+    .works .left .works-list {
+        margin-top: 30px;
+    }
+
+    .works .left .works-list .item .works-info h5,
+    .works .right .item a {
+        font-size: 20px;
+    }
+
+    .works .right .item>p,
+    .works .right .item:not(:first-child) a {
+        font-size: 14px;
+    }
+
+    .works .right .item:not(:first-child) p {
+        font-size: 13px;
+    }
+}
