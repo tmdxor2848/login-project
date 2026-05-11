@@ -7,6 +7,7 @@ const db = require('./db');
 
 const bcrypt = require('bcrypt');
 
+app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
@@ -93,7 +94,7 @@ app.post('/signup', async (req, res) => {
 
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
-    
+
         const sql = `
             INSERT INTO users (userid, password, name, sex, email)
             VALUES (?, ?, ?, ?, ?)
@@ -124,6 +125,10 @@ app.post('/signup', async (req, res) => {
 //     res.send('회원가입 완료');
 // });
 
+
+app.get('/order_btn', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'order_btn.html'));
+});
 
 
 // 동작 확인
