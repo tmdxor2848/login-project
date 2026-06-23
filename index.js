@@ -21,6 +21,9 @@ app.get('/main', (req, res) => {
 app.get('/signup_success', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'signup_success.html'));
 });
+app.get('/project', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'project.html'));
+});
 
 
 
