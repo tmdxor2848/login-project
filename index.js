@@ -7,7 +7,6 @@ const db = require('./db');
 
 const bcrypt = require('bcrypt');
 
-app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
@@ -24,6 +23,13 @@ app.get('/signup_success', (req, res) => {
 app.get('/project', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'project.html'));
 });
+app.get('/order_btn', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'order_btn.html'));
+});
+app.get('/lego', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'lego.html'));
+});
+
 
 
 
@@ -129,9 +135,6 @@ app.post('/signup', async (req, res) => {
 // });
 
 
-app.get('/order_btn', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'order_btn.html'));
-});
 
 
 // 동작 확인

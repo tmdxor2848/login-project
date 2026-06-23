@@ -45,7 +45,7 @@ nav {
     box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #ffffff;
 }
 
-nav.logo {
+nav .logo {
     height: 64px;
     width: 64px;
     color: #6d7582;
